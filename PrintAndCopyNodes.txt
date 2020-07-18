@@ -1,0 +1,38 @@
+//for copying from arrays of nodes
+//15 is arbitrary, can be replaced depending on size of array
+//list[i] is the array
+for(int i = 0; i < 15; i++){
+                if(connections[i] == NULL){
+                        list[i] == NULL;
+                }
+                else{
+                        Node<T>* current = connections[i];
+                        list[i] = new Node<T>(connections[i]->shortest_path, connections[i]->parent);
+                        Node<T>* head = list[i];
+                        current = current->next;
+                        while(current != NULL){
+                        list[i]->next = new Node<T>(current->shortest_path, current->parent);
+                        list[i] = list[i]->next;
+                        current = current->next;
+                        }
+                list[i] = head;
+                }
+}
+//connections is the given, list is the new
+
+//This loop reads off and prints the adjacency list
+//15 is arbitrary, can be replaced depending on size of array
+//list[i] is the array
+for(int i = 0; i < 15; i++){
+                if(list[i] == NULL){
+                        cout << "NULL" << endl;
+                }
+                else{
+                        Node<T>* current = list[i];
+                        while(current != NULL){
+                        cout << current->parent << " " << current->shortest_path << ", " ;
+                        current = current->next;
+                        }
+                        cout << endl;
+                }
+}
