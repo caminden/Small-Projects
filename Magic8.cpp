@@ -1,7 +1,7 @@
 //Magic 8 ball
 #include <iostream>;
 using namespace std;
-
+//work in progress
 int main() {
 
 	//char val = 's';
