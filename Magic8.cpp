@@ -2,15 +2,17 @@
 
 #include <iostream>
 #include <string>
+#include <ctime>
 using namespace std;
 //work in progress
 int main() {
 
-
 	string val = "start";
+	int n;
+	srand(time(NULL));
 
 	while (val != "quit") {
-		int n = rand() % 10;
+		n = rand() % 10;
 		cout << "Enter question or quit to quit" << endl;
 		getline(cin, val);
 
